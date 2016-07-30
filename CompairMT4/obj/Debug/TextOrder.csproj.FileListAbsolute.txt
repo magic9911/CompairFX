@@ -1,0 +1,11 @@
+C:\Users\ProjectX999\Source\Repos\TextOrder\TextOrder\bin\Debug\TextOrder.exe
+C:\Users\ProjectX999\Source\Repos\TextOrder\TextOrder\bin\Debug\TextOrder.pdb
+C:\Users\ProjectX999\Source\Repos\TextOrder\TextOrder\obj\Debug\TextOrder.csprojResolveAssemblyReference.cache
+C:\Users\ProjectX999\Source\Repos\TextOrder\TextOrder\obj\Debug\TextOrder.ClientHolderCtrl.resources
+C:\Users\ProjectX999\Source\Repos\TextOrder\TextOrder\obj\Debug\TextOrder.FrmMain.resources
+C:\Users\ProjectX999\Source\Repos\TextOrder\TextOrder\obj\Debug\TextOrder.Properties.Resources.resources
+C:\Users\ProjectX999\Source\Repos\TextOrder\TextOrder\obj\Debug\TextOrder.csproj.GenerateResource.Cache
+C:\Users\ProjectX999\Source\Repos\TextOrder\TextOrder\obj\Debug\TextOrder.exe
+C:\Users\ProjectX999\Source\Repos\TextOrder\TextOrder\obj\Debug\TextOrder.pdb
+C:\Users\ProjectX999\Source\Repos\CompairMT4\TextOrder\obj\Debug\TextOrder.exe
+C:\Users\ProjectX999\Source\Repos\CompairMT4\TextOrder\obj\Debug\TextOrder.pdb
