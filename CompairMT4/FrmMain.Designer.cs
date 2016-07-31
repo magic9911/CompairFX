@@ -23,97 +23,154 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.btnStart = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPort = new System.Windows.Forms.TextBox();
-            this.btnStop = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.BtnStart = new System.Windows.Forms.Button();
+            this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.TxtPort = new System.Windows.Forms.TextBox();
+            this.BtnStop = new System.Windows.Forms.Button();
+            this.DgvData = new System.Windows.Forms.DataGridView();
+            this.serverName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.symbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ask = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvData)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnStart
+            // BtnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(13, 21);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(121, 35);
-            this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
+            this.BtnStart.Location = new System.Drawing.Point(20, 32);
+            this.BtnStart.Name = "BtnStart";
+            this.BtnStart.Size = new System.Drawing.Size(182, 52);
+            this.BtnStart.TabIndex = 0;
+            this.BtnStart.Text = "Start";
+            this.BtnStart.UseVisualStyleBackColor = true;
+            this.BtnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // groupBox1
+            // GroupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtPort);
-            this.groupBox1.Controls.Add(this.btnStop);
-            this.groupBox1.Controls.Add(this.btnStart);
-            this.groupBox1.Location = new System.Drawing.Point(8, 8);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(402, 69);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Control";
+            this.GroupBox1.Controls.Add(this.Label1);
+            this.GroupBox1.Controls.Add(this.TxtPort);
+            this.GroupBox1.Controls.Add(this.BtnStop);
+            this.GroupBox1.Controls.Add(this.BtnStart);
+            this.GroupBox1.Location = new System.Drawing.Point(12, 12);
+            this.GroupBox1.Name = "GroupBox1";
+            this.GroupBox1.Size = new System.Drawing.Size(603, 104);
+            this.GroupBox1.TabIndex = 1;
+            this.GroupBox1.TabStop = false;
+            this.GroupBox1.Text = "Control";
             // 
-            // label1
+            // Label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(301, 30);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Port:";
+            this.Label1.AutoSize = true;
+            this.Label1.Location = new System.Drawing.Point(452, 45);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(53, 24);
+            this.Label1.TabIndex = 7;
+            this.Label1.Text = "Port:";
             // 
-            // txtPort
+            // TxtPort
             // 
-            this.txtPort.Location = new System.Drawing.Point(341, 28);
-            this.txtPort.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(50, 24);
-            this.txtPort.TabIndex = 6;
-            this.txtPort.Text = "82";
+            this.TxtPort.Location = new System.Drawing.Point(512, 42);
+            this.TxtPort.Name = "TxtPort";
+            this.TxtPort.Size = new System.Drawing.Size(73, 32);
+            this.TxtPort.TabIndex = 6;
+            this.TxtPort.Text = "82";
             // 
-            // btnStop
+            // BtnStop
             // 
-            this.btnStop.Enabled = false;
-            this.btnStop.Location = new System.Drawing.Point(138, 21);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(121, 35);
-            this.btnStop.TabIndex = 1;
-            this.btnStop.Text = "Stop";
-            this.btnStop.UseVisualStyleBackColor = true;
-            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            this.BtnStop.Enabled = false;
+            this.BtnStop.Location = new System.Drawing.Point(207, 32);
+            this.BtnStop.Name = "BtnStop";
+            this.BtnStop.Size = new System.Drawing.Size(182, 52);
+            this.BtnStop.TabIndex = 1;
+            this.BtnStop.Text = "Stop";
+            this.BtnStop.UseVisualStyleBackColor = true;
+            this.BtnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // DgvData
+            // 
+            this.DgvData.AllowUserToAddRows = false;
+            this.DgvData.AllowUserToOrderColumns = true;
+            this.DgvData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.serverName,
+            this.symbol,
+            this.bid,
+            this.ask});
+            this.DgvData.GridColor = System.Drawing.Color.DimGray;
+            this.DgvData.Location = new System.Drawing.Point(12, 135);
+            this.DgvData.Name = "DgvData";
+            this.DgvData.ReadOnly = true;
+            this.DgvData.RowHeadersVisible = false;
+            this.DgvData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DgvData.RowTemplate.Height = 28;
+            this.DgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvData.Size = new System.Drawing.Size(1091, 522);
+            this.DgvData.TabIndex = 2;
+            // 
+            // serverName
+            // 
+            this.serverName.HeaderText = "Server";
+            this.serverName.Name = "serverName";
+            this.serverName.ReadOnly = true;
+            // 
+            // symbol
+            // 
+            this.symbol.HeaderText = "Symbol";
+            this.symbol.Name = "symbol";
+            this.symbol.ReadOnly = true;
+            // 
+            // bid
+            // 
+            this.bid.HeaderText = "Bid";
+            this.bid.Name = "bid";
+            this.bid.ReadOnly = true;
+            // 
+            // ask
+            // 
+            this.ask.HeaderText = "Ask";
+            this.ask.Name = "ask";
+            this.ask.ReadOnly = true;
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(900, 483);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1126, 675);
+            this.Controls.Add(this.DgvData);
+            this.Controls.Add(this.GroupBox1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.GroupBox1.ResumeLayout(false);
+            this.GroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvData)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnStart;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPort;
+        private System.Windows.Forms.Button BtnStart;
+        private System.Windows.Forms.GroupBox GroupBox1;
+        private System.Windows.Forms.Button BtnStop;
+        private System.Windows.Forms.Label Label1;
+        private System.Windows.Forms.TextBox TxtPort;
+        private System.Windows.Forms.DataGridView DgvData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ServerName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Symbol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ask;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serverName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ask;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn symbol;
     }
 }
 

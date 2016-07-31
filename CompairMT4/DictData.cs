@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using TextOrder.Holder;
+﻿using System.Collections.Generic;
 
 namespace TextOrder {
     public class DictData : Dictionary<string, string> {

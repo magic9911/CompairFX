@@ -1,14 +1,12 @@
 ﻿using GoldStar.Lib.Utils;
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using TextOrder;
-using TextOrder.Holder;
+using CompairMT4.model;
 
 namespace YuriNET.CoreServer.Http {
 
@@ -28,10 +26,10 @@ namespace YuriNET.CoreServer.Http {
         //public ClientHolderCtrl MasterControlHolder;
 
         // Event
-        public delegate void OnUpdateDelegate(object sender, UpdateMasterEvenArgs holder);
+        public delegate void OnUpdateDelegate(object sender, UpdateMasterEvenArgs e);
         public event OnUpdateDelegate OnUpdateMaster;
-        public delegate void OnUpdateSlavesDelegate(object sender, UpdateSlavesEvenArgs holders);
-        public event OnUpdateSlavesDelegate OnUpdateSlaves;
+        //public delegate void OnUpdateSlavesDelegate(object sender, UpdateSlavesEvenArgs holders);
+        //public event OnUpdateSlavesDelegate OnUpdateSlaves;
 
         /// <summary>
         /// Constructor HTTP Controller
@@ -62,83 +60,21 @@ namespace YuriNET.CoreServer.Http {
             // Header HTTP
             string[] segments = p.URI.Segments;
             IDictionary<string, string> parameters = p.http_query;
-
+            
 
             // Response text
             StringBuilder response = new StringBuilder();
+            //servername=fbs;symbol=EURUSD;bid=1.11111;ask=1.22222
 
-            if (parameters.ContainsKey("mode")) {
-                if (parameters["mode"] == "close") {
-                    string[] CloseID = parameters["positions"].Split('|').Select((ary) => ary.Split(';')[0]).ToArray();
+            if (parameters.ContainsKey("servername")) {
+                FxData data = new FxData();
+                data.ServerName = parameters["servername"];
+                data.Symbol = parameters["symbol"];
+                data.Bid = parameters["bid"];
+                data.Ask = parameters["ask"];
 
-                    foreach (var id in CloseID) {
-                        if (id != "") {
-                            masterData.Remove(id);
-                        }
-                    }
-                    response.Append("[Close-OK]");
-
-                } else if (parameters["mode"] == "save") {
-
-                    string[] positions = parameters["positions"].Split('|');
-
-                    foreach (var position in positions) {
-                        if (position != "") {
-                            string id = position.Split(';')[0];
-
-                            if (masterData.ContainsKey(id)) {
-                                masterData[id] = position;
-                            } else {
-                                masterData.Add(id, position);
-                            }
-                        }
-                    }
-                    response.Append("[Save-OK]");
-                } else if (parameters["mode"] == "client") {
-                    if (masterData.Count > 0) {
-                        //string id = parameters.ContainsKey("id") ? parameters["id"] : "";
-                        string Symbol = parameters.ContainsKey("symbol") ? parameters["symbol"] : "";
-                        
-                        if (/*id == "" || */Symbol == "") {
-                            p.write500();
-                            p.outputStream.WriteLine("Required symbol !");
-                            return;
-                        }
-
-                        // เหลือ ค้นตรงนี้ ถ้า symbol ส่ง แค่่อันเดียว
-                        //foreach (var data in masterData.Values) {
-                        //    response.Append(data.Value.ToString());
-                        //}
-                        var find = masterData
-                            .Values.Where((data) => {
-                                string[] dataSplit = data.Split(';');
-                                return /*dataSplit[0] == id && */dataSplit[1] == Symbol;
-                            }).ToArray();
-                        if (find.Length > 0) {
-                            string delimiter = "";
-                            foreach (var position in find) {
-                                response.Append(delimiter);
-                                response.Append(position);
-                                delimiter = "|";
-                            }
-                        } else {
-                            response.AppendLine("Symbol : " + Symbol + " not found");
-                        }
-                    }
-
-                } else if (parameters["mode"] == "checkOrder") {
-                    if (masterData.Count > 0) {
-                        string OrderID = parameters["id"];
-                        if (OrderID != "") {
-                            response.Append(masterData[OrderID].ToString());
-                        }
-                    }
-                } else {
-                    // Default
-                    p.write500();
-                    p.outputStream.WriteLine("<h1>500 Internal Server Error</h1>");
-                    return;
-                }
+                OnUpdateMaster(this, new UpdateMasterEvenArgs(data));
+                response.Append("Updated");
             } else {
                 // Default
                 p.write404();
@@ -235,13 +171,12 @@ namespace YuriNET.CoreServer.Http {
         }
     }
 
-    class UpdateMasterEvenArgs : EventArgs {
-        public bool Master;
-        public ClientHolder DataHolder;
-    }
+    public class UpdateMasterEvenArgs : EventArgs {
+        public UpdateMasterEvenArgs(FxData model) {
+            this.Model = model;
+        }
 
-    class UpdateSlavesEvenArgs : EventArgs {
-        public bool Master;
-        public DictData DataHolders;
+        public FxData Model;
     }
+    
 }
