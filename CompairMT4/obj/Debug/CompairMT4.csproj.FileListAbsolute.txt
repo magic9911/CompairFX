@@ -1,0 +1,9 @@
+C:\Users\ProjectX999\Source\Repos\CompairMT4\CompairFX\CompairMT4\bin\Debug\CompairMT4.exe
+C:\Users\ProjectX999\Source\Repos\CompairMT4\CompairFX\CompairMT4\bin\Debug\CompairMT4.pdb
+C:\Users\ProjectX999\Source\Repos\CompairMT4\CompairFX\CompairMT4\obj\Debug\CompairMT4.csprojResolveAssemblyReference.cache
+C:\Users\ProjectX999\Source\Repos\CompairMT4\CompairFX\CompairMT4\obj\Debug\TextOrder.ClientHolderCtrl.resources
+C:\Users\ProjectX999\Source\Repos\CompairMT4\CompairFX\CompairMT4\obj\Debug\TextOrder.FrmMain.resources
+C:\Users\ProjectX999\Source\Repos\CompairMT4\CompairFX\CompairMT4\obj\Debug\CompairMT4.Properties.Resources.resources
+C:\Users\ProjectX999\Source\Repos\CompairMT4\CompairFX\CompairMT4\obj\Debug\CompairMT4.csproj.GenerateResource.Cache
+C:\Users\ProjectX999\Source\Repos\CompairMT4\CompairFX\CompairMT4\obj\Debug\CompairMT4.exe
+C:\Users\ProjectX999\Source\Repos\CompairMT4\CompairFX\CompairMT4\obj\Debug\CompairMT4.pdb

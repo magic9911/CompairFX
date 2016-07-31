@@ -66,7 +66,7 @@ namespace YuriNET.CoreServer.Http {
 
             // Response text
             StringBuilder response = new StringBuilder();
-
+            //servername=fbs;symbol=EURUSD;bid=1.11111;ask=1.22222
             if (parameters.ContainsKey("mode")) {
                 if (parameters["mode"] == "close") {
                     string[] CloseID = parameters["positions"].Split('|').Select((ary) => ary.Split(';')[0]).ToArray();
