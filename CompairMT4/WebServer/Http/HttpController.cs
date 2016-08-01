@@ -60,7 +60,7 @@ namespace YuriNET.CoreServer.Http {
             // Header HTTP
             string[] segments = p.URI.Segments;
             IDictionary<string, string> parameters = p.http_query;
-            
+
 
             // Response text
             StringBuilder response = new StringBuilder();
@@ -75,7 +75,7 @@ namespace YuriNET.CoreServer.Http {
 
                 OnUpdateMaster(this, new UpdateMasterEvenArgs(data));
                 response.Append("Updated");
-            } else {
+                            } else {
                 // Default
                 p.write404();
                 p.outputStream.WriteLine("<h1>404 Page not found</h1>");
@@ -174,7 +174,7 @@ namespace YuriNET.CoreServer.Http {
     public class UpdateMasterEvenArgs : EventArgs {
         public UpdateMasterEvenArgs(FxData model) {
             this.Model = model;
-        }
+    }
 
         public FxData Model;
     }
