@@ -306,7 +306,6 @@
             this.lb_min.Name = "lb_min";
             this.lb_min.Size = new System.Drawing.Size(598, 35);
             this.lb_min.TabIndex = 5;
-            this.lb_min.Text = "label5";
             // 
             // lb_count
             // 
@@ -315,7 +314,6 @@
             this.lb_count.Name = "lb_count";
             this.lb_count.Size = new System.Drawing.Size(598, 35);
             this.lb_count.TabIndex = 5;
-            this.lb_count.Text = "label5";
             // 
             // lb_Total
             // 
@@ -324,7 +322,6 @@
             this.lb_Total.Name = "lb_Total";
             this.lb_Total.Size = new System.Drawing.Size(598, 37);
             this.lb_Total.TabIndex = 5;
-            this.lb_Total.Text = "label5";
             // 
             // tableLayoutPanel1
             // 

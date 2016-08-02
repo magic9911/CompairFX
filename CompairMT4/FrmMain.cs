@@ -107,11 +107,11 @@ namespace TextOrder {
                         total = ms + cs;
                         if (total < tmp) {
                             tmp = total;
-                            lb_min.Text = String.Format("{0:F5}", ms) + "[ASK: " + String.Format("{0:F5}", ask1) + " - BID: " +
+                            lb_min.Text = String.Format("{0:F5}", ms) + " [ASK: " + String.Format("{0:F5}", ask1) + " - BID: " +
                                           String.Format("{0:F5}", bid2) + "]";
-                            lb_count.Text = String.Format("{0:F5}", cs) + "[BID: " + String.Format("{0:F5}", bid1) + " - ASK: " +
+                            lb_count.Text = String.Format("{0:F5}", cs) + " [BID: " + String.Format("{0:F5}", bid1) + " - ASK: " +
                                           String.Format("{0:F5}", ask2) + "]";
-                            lb_Total.Text = String.Format("{0:F5}", total) + "[" + row.Cells["serverName"].Value.ToString() + "/" +
+                            lb_Total.Text = String.Format("{0:F5}", total) + " [" + row.Cells["serverName"].Value.ToString() + "/" +
                                           row2.Cells["serverName"].Value.ToString() + "]";
                         }
 
