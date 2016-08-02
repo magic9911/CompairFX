@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using TextOrder;
-using CompairMT4.model;
+using CompairMT4.Model;
 
 namespace YuriNET.CoreServer.Http {
 

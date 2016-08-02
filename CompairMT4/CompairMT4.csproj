@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\CustomDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DictData.cs" />
     <Compile Include="FileUtility.cs" />
     <Compile Include="FrmMain.cs">
@@ -53,7 +56,7 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="model\FxData.cs" />
+    <Compile Include="Model\FxData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\AssemblyInfo.cs" />

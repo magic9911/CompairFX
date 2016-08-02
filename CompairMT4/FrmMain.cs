@@ -4,7 +4,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Linq;
 using YuriNET.CoreServer.Http;
-using CompairMT4.model;
+using CompairMT4.Model;
 using System.Collections.Generic;
 
 namespace TextOrder {

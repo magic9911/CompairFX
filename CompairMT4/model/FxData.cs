@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CompairMT4.model {
+namespace CompairMT4.Model {
     public class FxData {
 
         public FxData() {
